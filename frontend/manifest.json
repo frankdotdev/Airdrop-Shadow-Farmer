@@ -1,0 +1,12 @@
+{
+    "url": "https://your-shadow-farmer-app.vercel.app",
+    "name": "Shadow Farmer",
+    "iconUrl": "https://your-shadow-farmer-app.vercel.app/logo_192.png",
+    "termsOfUseUrl": "https://your-shadow-farmer-app.vercel.app/terms",
+    "privacyPolicyUrl": "https://your-shadow-farmer-app.vercel.app/privacy",
+    "headerColor": "#0f172a",
+    "backgroundColor": "#020617",
+    "version": "1.0",
+    "capabilities": ["pushed_messages", "biometrics"],
+    "permissions": ["wallet_connect"]
+  }
