@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: shadow_farmer_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 5050
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7
+  celery:
+    build: .
+    command: celery -A app.workers.farming_tasks worker --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+volumes:
+  postgres_data:
