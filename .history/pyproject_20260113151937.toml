@@ -65,7 +65,7 @@ pbs-installer==2025.12.17
 pip==25.3
 pkginfo==1.12.1.2
 platformdirs==4.5.0
-playwright==1.30.0
+playwright==1.40.0
 playwright-stealth==2.0.0
 pluggy==1.6.0
 poetry==2.2.1
